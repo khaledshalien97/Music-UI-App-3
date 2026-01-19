@@ -59,7 +59,8 @@ class PlayMusicScreen extends StatelessWidget {
           ),
 
           Container(
-            padding: EdgeInsets.symmetric(horizontal: 20, vertical: 30),
+        
+           padding: EdgeInsets.symmetric(horizontal: 24, vertical: 55),
             child: SingleChildScrollView(
               child: Column(
                 children: [

@@ -51,7 +51,7 @@ class PlayListScreen extends StatelessWidget {
           ),
 
           SingleChildScrollView(
-            child: Column(children: [imageMusic(context), musicList()]),
+            child: Column(children: [imageMusic(context), musicList(context)]),
           ),
         ],
       ),

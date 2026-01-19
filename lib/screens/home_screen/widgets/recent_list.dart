@@ -29,6 +29,7 @@ class RecentList extends StatelessWidget {
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(16),
                     image: DecorationImage(
+                      fit: BoxFit.cover,
                       image: AssetImage(data[index].musicImg),
                     ),
                   ),
@@ -51,7 +52,7 @@ class RecentList extends StatelessWidget {
             ),
           );
         },
-        separatorBuilder: (_, __) => const SizedBox(width: 10),
+        separatorBuilder: (_, __) => const SizedBox(width: 15),
         itemCount: DataModel.recentMusic.length,
       ),
     );

@@ -15,7 +15,7 @@ class DataModel {
     DataModel(
       musicName: "R&B Playlist",
       artistName: "Chill your mind",
-      musicImg: "assets/images/daily_mix_2.jpg",
+      musicImg: "assets/images/r&b_playlist.jpg",
       time: "",
     ),
     DataModel(
@@ -42,7 +42,7 @@ class DataModel {
     DataModel(
       musicName: "Fountains",
       artistName: "Drake, Tems",
-      musicImg: "assets/images/i_like_you.jpg",
+      musicImg: "assets/images/fountains.jpg",
       time: "3:18",
     ),
   ];

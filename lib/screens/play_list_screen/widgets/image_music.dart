@@ -4,36 +4,46 @@ import 'package:music_ui_app/screens/play_music_screen/play_music_screen.dart';
 
 Container imageMusic(BuildContext context) {
   return Container(
-    padding: EdgeInsets.fromLTRB(24, 55, 24, 55),
-    height: 340,
-    width: double.infinity,
-    foregroundDecoration: BoxDecoration(
-      gradient: LinearGradient(
-        begin: Alignment.topCenter,
-        end: Alignment.bottomCenter,
-        colors: [
-          Color(0xff000000).withOpacity(0.0),
-          Color(0xff000000).withOpacity(0.2),
-        ],
-      ),
-      borderRadius: const BorderRadius.only(
-        bottomLeft: Radius.circular(24),
-        bottomRight: Radius.circular(24),
-      ),
-    ),
-    decoration: BoxDecoration(
-      image: DecorationImage(
-        image: AssetImage("assets/images/true_love.jpg"),
-        fit: BoxFit.cover,
-      ),
+    height: MediaQuery.of(context).size.height * 0.45,
+    decoration: const BoxDecoration(
       borderRadius: BorderRadius.only(
         bottomLeft: Radius.circular(24),
         bottomRight: Radius.circular(24),
       ),
     ),
-    child: Column(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [buttonControll(context), musicNameAndPlayButton(context)],
+
+    child: ClipRRect(
+      borderRadius: const BorderRadius.only(
+        bottomLeft: Radius.circular(24),
+        bottomRight: Radius.circular(24),
+      ),
+      child: Stack(
+        fit: StackFit.expand,
+        children: [
+          Image.asset("assets/images/r&b_playlist.jpg", fit: BoxFit.cover),
+          Container(
+            padding: EdgeInsets.fromLTRB(24, 55, 24, 55),
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                colors: [
+                  Colors.black.withOpacity(0.0),
+                  Colors.black.withOpacity(0.8),
+                ],
+                stops: const [0.0, 1.0],
+              ),
+            ),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                buttonControll(context),
+                musicNameAndPlayButton(context),
+              ],
+            ),
+          ),
+        ],
+      ),
     ),
   );
 }

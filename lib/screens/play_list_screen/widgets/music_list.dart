@@ -3,10 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:music_ui_app/model/data_model.dart';
 import 'package:music_ui_app/screens/common_widgets/common_text_widget.dart';
 
-SizedBox musicList() {
+SizedBox musicList(BuildContext context) {
   return SizedBox(
-    height: 350,
+    height:  MediaQuery.of(context).size.height * 0.50,
     child: ListView.builder(
+      padding: EdgeInsets.only(top: 10),
       itemBuilder: (context, index) {
         var data = DataModel.playlistMusic;
         return Container(

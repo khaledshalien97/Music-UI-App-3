@@ -18,21 +18,19 @@ class FavouritesList extends StatelessWidget {
           fontSize: 18,
           fontWeight: FontWeight.w600,
         ),
-        SizedBox(height: 10),
+        SizedBox(height: 24),
         SizedBox(
           height: 200,
           child: ListView.builder(
+            padding: EdgeInsets.zero,
             itemBuilder: (context, index) {
               var data = DataModel.favouritesMusic;
               return musicContainer(data, index);
             },
-
             itemCount: DataModel.favouritesMusic.length,
           ),
         ),
       ],
     );
   }
-
- 
 }
